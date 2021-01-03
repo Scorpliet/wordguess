@@ -1,3 +1,5 @@
+import numpy as np
+
 columns=[]
 row1=['A','B','C','D']
 row2=['E','F','G','H']
@@ -64,9 +66,16 @@ def guess():
     columnopt.clear()
     length_max_value2 = len(max(alpt2, key=len))
     for i in range(length_max_value2):
-        print(alpt2[i])                
-
+        print(alpt2[i])  
+    print("YOUR WORD WAS")
+    for i in range(length_max_value2):
+        j=i
+        print(alpt2[i][j])    
 
 printalp()
 length = int(input("Enter the length of your word "))
 guess()
+
+
+
+   

@@ -4,7 +4,7 @@ row3=['I','J','K','L']
 row4=['M','N','O','P']
 row5=['Q','R','S','T']
 row6=['U','V','W','X']
-row7=['Y','Z']
+row7=['Y','Z','.','.']
 alphabet=[row1,row2,row3,row4,row5,row6,row7]
 def tpose(array): #Transpose function i copied from internet
     return [ [row[c] for row in array if c < len(row)] for c in range(0, max([len(row) for row in array])) ]

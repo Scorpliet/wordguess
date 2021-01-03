@@ -1,6 +1,3 @@
-import numpy as np
-
-columns=[]
 row1=['A','B','C','D']
 row2=['E','F','G','H']
 row3=['I','J','K','L']

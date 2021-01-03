@@ -18,11 +18,6 @@ def printalp():
    for i in range(7):
      print(alphabet[i])
 
-
-
-maxcolumns=[1,2,3,4,5,6,7]
-
-
 def guess():
     columnopt=[]
     alpt=[]

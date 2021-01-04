@@ -1,11 +1,4 @@
-row1=['A','B','C','D']
-row2=['E','F','G','H']
-row3=['I','J','K','L']
-row4=['M','N','O','P']
-row5=['Q','R','S','T']
-row6=['U','V','W','X']
-row7=['Y','Z','.','.']
-alphabet=[row1,row2,row3,row4,row5,row6,row7]
+alphabet=['A','B','C','D'],['E','F','G','H'],['I','J','K','L'],['M','N','O','P'],['Q','R','S','T'],['U','V','W','X'],['Y','Z','.','.']]
 
 def tpose(array): #Transpose function i copied from internet
     return [ [row[c] for row in array if c < len(row)] for c in range(0, max([len(row) for row in array])) ]
@@ -49,8 +42,6 @@ def guess():
         else:
              col_options.append(guessinp) #adding the input value in a list so it can be fetched later
              x = x+1
-    
-    range2= len(col_options)
     print(col_options)
     
     for i in col_options:
@@ -68,8 +59,7 @@ def guess():
    
     for i in range(length_max_value2):
            j=i 
-           print(alpha_tpose2[i][j])  
-          
+           print(alpha_tpose2[i][j])           
 
 printalp()
 length = int(input("Enter the length of your word "))

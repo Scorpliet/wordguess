@@ -1,6 +1,6 @@
 alphabet=['A','B','C','D'],['E','F','G','H'],['I','J','K','L'],['M','N','O','P'],['Q','R','S','T'],['U','V','W','X'],['Y','Z','.','.']]
 
-def tpose(array): #Transpose function i copied from internet
+def tpose(array):
     return [ [row[c] for row in array if c < len(row)] for c in range(0, max([len(row) for row in array])) ]
 
 def printalp():

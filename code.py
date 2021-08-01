@@ -1,4 +1,4 @@
-alphabet=['A','B','C','D'],['E','F','G','H'],['I','J','K','L'],['M','N','O','P'],['Q','R','S','T'],['U','V','W','X'],['Y','Z','.','.']]
+alphabet=[['A','B','C','D'],['E','F','G','H'],['I','J','K','L'],['M','N','O','P'],['Q','R','S','T'],['U','V','W','X'],['Y','Z','.','.']]
 
 def tpose(array):
     return [ [row[c] for row in array if c < len(row)] for c in range(0, max([len(row) for row in array])) ]
@@ -14,18 +14,17 @@ def guess():
     alpha_tpose=[]
     alpha_tpose2=[]
     x = 1
-    while x <=length:
+    while x <=length: #taking column options input until the length of word
          guessinp = int(input("Enter the column of the {}".format(x) + "th alphabet "))
-         if guessinp >4 or guessinp<1:
-             print("Pls enter correct column number")
+         if guessinp >4 or guessinp<1: #invalid column
+             print("Pls enter correct column number") 
          else:    
-            col_options.append(guessinp) #adding the input value in a list so it can be fetched later
+            col_options.append(guessinp) #adding the input column value in a list so it can be fetched later
             x = x+1 
     print(col_options)
-    
-    for i in col_options:
-              alp2=tpose(alphabet) #Transposed the array
-              alpha_tpose.append(alp2[i-1]) #added selected columns in new array
+    alp2=tpose(alphabet) #Transposed the original alphabet array
+    for i in col_options: #using the column values to create a new array
+              alpha_tpose.append(alp2[i-1]) #added selected columns in new array, columns are referenced from transposed alphabet array, i-1 is the correct index since its 0,1,2,3 and not 1,2,3,4
     
     length_max_value = len(max(alpha_tpose, key=len))
     range_of_array = len(alpha_tpose)

@@ -1,3 +1,3 @@
 # wordguess
 
-A simple word guess program done in fewest lines possible
+A simple word guess game program
